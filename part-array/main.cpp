@@ -59,6 +59,8 @@ int max_sum(vector<int> & arr, int k, int i) {
 
 int max_sum_after_partitioning(vector<int> & arr, int k) {
     int res = 0;
+    
+    init_table();
 
     for(int i = 0; i < k; ++i) {
         for(int s = i + 1; s <= k; ++s) {
@@ -94,7 +96,7 @@ int main(int argc, const char * argv[]) {
 
     // Partition constant
     int k = 10;
-    
+
     // Array to be partitioned
     vector<int> arr = {1,4,1,5,7,3,6,1,9,9,3};
     
